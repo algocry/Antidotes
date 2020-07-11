@@ -7,11 +7,13 @@ from core import connection_manager
 from core import anti_whatsphish
 from core import anti_shellphish
 from core import anti_saycheese
+from core import anti_zshadow
 
 class scan_status:
     SHELLPHISH = False
     WHATPHISH = False
     SAYCHEESE = False
+    ZSHADOW = False
 
 class bcolors:
     HEADER = '\033[1m'
@@ -37,9 +39,9 @@ def scan(url):
 
     #shellphish
     print(bcolors.BOLD + bcolors.HEADER + 'Scanning for shellphish...' + bcolors.ENDC)
-    cheese_positive = scanner.scan_shellphish(url)
+    shellphish_positive = scanner.scan_shellphish(url)
     
-    if cheese_positive:
+    if shellphish_positive:
         print(bcolors.BOLD + bcolors.OKGREEN + '[+] Found positive to shellphish' + bcolors.ENDC)
         scan_status.SHELLPHISH = True
     else:
@@ -48,14 +50,26 @@ def scan(url):
     
     #whatphish
     print(bcolors.BOLD + bcolors.HEADER + 'Scanning for whatphish...' + bcolors.ENDC)
-    cheese_positive = scanner.scan_whatphish(url)
+    whatsphish_positive = scanner.scan_whatphish(url)
     
-    if cheese_positive:
+    if whatsphish_positive:
         print(bcolors.BOLD + bcolors.OKGREEN + '[+] Found positive to whatphish' + bcolors.ENDC)
         scan_status.WHATPHISH = True
     else:
         print(bcolors.BOLD + bcolors.FAIL + '[-] Found negative to whatphish' + bcolors.ENDC)
         scan_status.WHATPHISH = False
+
+    #zshadow
+    print(bcolors.BOLD + bcolors.HEADER + 'Scanning for zshadow...' + bcolors.ENDC)
+    zshadow_positive = scanner.scan_zshadow(url)
+    
+    if cheese_positive:
+        print(bcolors.BOLD + bcolors.OKGREEN + '[+] Found positive to zshadow' + bcolors.ENDC)
+        scan_status.ZSHADOW = True
+    else:
+        print(bcolors.BOLD + bcolors.FAIL + '[-] Found negative to zshadow' + bcolors.ENDC)
+        scan_status.ZSHADOW = False
+
 
 def actions(url):
     if scan_status.SAYCHEESE:
@@ -80,7 +94,13 @@ def actions(url):
             if 'exit' not in message:
                 break
             else:
-                anti_shellphish.transmitter(message, url)
+                print(bcolors.BOLD + bcolors.OKBLUE + 'Sending [+]' + bcolors.ENDC)
+                status_code = anti_shellphish.transmitter(message, url)
+                if status_code == 200:
+                    print(bcolors.BOLD + bcolors.OKGREEN + '[+] Done..' + bcolors.ENDC)
+                else:
+                    print(bcolors.BOLD + bcolors.FAIL + '[-] Failed..' + bcolors.ENDC)
+                    
             print()
 
     elif scan_status.WHATPHISH:
@@ -89,16 +109,37 @@ def actions(url):
             if 'exit' in message:
                 break
             else:
-                anti_whatsphish.transmitter(message, url)
+                print(bcolors.BOLD + bcolors.OKBLUE + 'Sending [+]' + bcolors.ENDC)
+                status_code = anti_whatsphish.transmitter(message, url)
+                if status_code == 200:
+                    print(bcolors.BOLD + bcolors.OKGREEN + '[+] Done..' + bcolors.ENDC)
+                else:
+                    print(bcolors.BOLD + bcolors.FAIL + '[-] Failed..' + bcolors.ENDC)
             print()
     
+
+    elif scan_status.ZSHADOW:
+        url = url.split('//')[1].split('/')[0]
+        while True:
+            message = input(bcolors.BOLD + bcolors.WARNING +'Your Message> ' + bcolors.ENDC)
+            if 'exit' not in message:
+                break
+            else:
+                print(bcolors.BOLD + bcolors.OKBLUE + 'Sending [+]' + bcolors.ENDC)
+                status_code = anti_zshadow.transmitter(message, url)
+                if status_code == 200:
+                    print(bcolors.BOLD + bcolors.OKGREEN + '[+] Done..' + bcolors.ENDC)
+                else:
+                    print(bcolors.BOLD + bcolors.FAIL + '[-] Failed..' + bcolors.ENDC)
+            print()
+
     else:
         print(bcolors.BOLD + bcolors.FAIL + '[-] This Seems safe.' + bcolors.ENDC)
 
 if __name__ == "__main__":
     try:
         if sys.argv[1] == '-v' or '--version':
-            print(bcolors.BOLD + bcolors.WARNING + 'SkidSTER v0.1' + bcolors.ENDC)
+            print(bcolors.BOLD + bcolors.WARNING + 'Antidote v0.1' + bcolors.ENDC)
             exit(0)
     except Exception as e:
         banner_pre = bcolors.BOLD + 'Internet Check: ' + bcolors.ENDC
@@ -108,11 +149,11 @@ if __name__ == "__main__":
             print()
         
             try:
-                url = input(bcolors.BOLD + bcolors.OKGREEN + '[*] Enter URL to scan:' + bcolors.ENDC)
-                print(bcolors.BOLD + bcolors.OKGREEN + '[*] Scanning started...' + bcolors.ENDC)                
+                url = input(bcolors.BOLD + bcolors.OKBLUE + '[*] Enter URL to scan:' + bcolors.ENDC)
+                print(bcolors.BOLD + bcolors.OKBLUE + '[*] Scanning started...' + bcolors.ENDC)                
                 scan(url)
-                print(bcolors.BOLD + bcolors.OKGREEN + '[*] Done' + bcolors.ENDC)
-                print(bcolors.BOLD + bcolors.OKGREEN + 'Action started...' + bcolors.ENDC)
+                print(bcolors.BOLD + bcolors.OKBLUE + '[*] Done' + bcolors.ENDC)
+                print(bcolors.BOLD + bcolors.OKBLUE + 'Action started...' + bcolors.ENDC)
                 actions(url)
             except Exception as e:
                 print(bcolors.BOLD + bcolors.FAIL + 'Invalid url!!!' + bcolors.ENDC)
