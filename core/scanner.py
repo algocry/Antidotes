@@ -10,7 +10,7 @@ class scan_keys:
     SAYCHEESE = 'cat: imgdata'
     WHATPHISH = '<input class="input100" type="password" name="number" placeholder="Phone Number">'
     SHELLPHISH = 'fwrite($fp, $victim);'
-    
+    ZSHADOW = 'z-shadow'
 
 def scan_cheese(url):
     if 'https://' in url:
@@ -52,6 +52,20 @@ def scan_shellphish(url):
     except:
         response = requests.get('http://' + url, headers=basic_headers)
     if scan_keys.SHELLPHISH in response.text:
+        return True
+    else:
+        return False
+
+def scan_zshadow(url):
+    if 'https://' in url:
+        url = url.split('://')[1]
+    else:
+        pass
+    try:
+        response = requests.get('https://' + url, headers=basic_headers)
+    except:
+        response = requests.get('http://' + url, headers=basic_headers)
+    if scan_keys.ZSHADOW in response.text:
         return True
     else:
         return False
