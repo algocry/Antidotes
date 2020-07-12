@@ -82,7 +82,7 @@ $ python3 interactor.py
 
 ## TO-DO list:
 
-* **[Done]** Add auto scan clipboard copied URLs.
+* **[Done]** Add auto scan clipboard copied URLs. [9cc7fb7](https://github.com/StrinTH/Antidote/commit/9cc7fb7)
 
 * Add anti saythanks module (In case needed)
 
