@@ -1,6 +1,7 @@
 # Antidote - A Skiddies buster tool
 
-[![Build Status](https://travis-ci.com/StrinTH/SkidSTER.svg?branch=master)](https://travis-ci.com/StrinTH/SkidSTER)
+[![Build Status](https://travis-ci.com/StrinTH/Antidote.svg?branch=master)](https://travis-ci.com/StrinTH/Antidote)
+![Build Status](https://img.shields.io/badge/stage-alpha-orange)
 
 ```sh
     Project under development
@@ -13,10 +14,10 @@ Being a script kid is not bad. But using someone else's tools and script to harm
 ## Setup:
 
 ```sh
-    $ git clone https://github.com/StrinTH/Antidote
-    $ cd Antidote
-    $ pip install requirements.txt
-    $ python3 interactor.py
+$ git clone https://github.com/StrinTH/Antidote
+$ cd Antidote
+$ pip install requirements.txt
+$ python3 interactor.py
 
 ```
 
@@ -26,9 +27,14 @@ Being a script kid is not bad. But using someone else's tools and script to harm
 
 * It contains a special module for 'Saycheese' or other similar 'camera spoofing' scripts. Inherited from <https://github.com/StrinTH/saycheese-antidote>.
 
+* This tool can be run in background and keeps checking for malicious url from clipboard and will scan it automatically.
+
 * This tool is almost depended on requests package. and some less used others for basic operatons.
 
 * Some new features will be added soon, to play with skids.
+
+### _Miscellaneous Feature:_
+##### In case, if you want to run it for always, you can run assistance.pyw by clicking on it, which will keep tracking clipboard urls and scan it.
 
 ## Modules description:
 
@@ -76,7 +82,7 @@ Being a script kid is not bad. But using someone else's tools and script to harm
 
 ## TO-DO list:
 
-* Add auto scan clipboard copied URLs
+* **[Done]** Add auto scan clipboard copied URLs.
 
 * Add anti saythanks module (In case needed)
 
