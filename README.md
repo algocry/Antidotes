@@ -4,7 +4,7 @@
 [![Build Status](https://img.shields.io/badge/stage-alpha-orange)]()
 
 AntiDOTE v0.2
-[![logo](./assets/logo2.png)]()
+![logo](./assets/logo2.png)
 AntiDOTE v0.2
 
 --------------
