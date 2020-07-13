@@ -90,6 +90,13 @@ $ python3 -m pip install antidotes
 
 * Make GUI for this tool to handle actions for URLs through corner sidebar.
 
+### Collaborators
+
+* Thanks to all Devs who helped in improving this project.
+
+  * [Anjan Roy](https://github.com/itzmeanjan)
+  * [0x0is1](https://github.com/0x0is1)
+
 ### **Support authors**:
 
 [![Donate](./assets/default-pink.png)](https://www.buymeacoffee.com/6dciIwk)
