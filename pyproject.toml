@@ -3,9 +3,9 @@ requires = ["flit_core >=2,<4"]
 build-backend = "flit_core.buildapi"
 
 [tool.flit.metadata]
-module = "antidote"
-author = "Author"
-author-email = "author@email.com"
+module = "antidotes"
+author = "0x0is1"
+author-email = "0x0is1@protonmail.com"
 home-page = "https://github.com/StrinTH/Antidote"
 classifiers = [
     "Intended Audience :: End Users/Desktop",
@@ -20,4 +20,4 @@ description-file="README.md"
 dev = ["flit"]
 
 [tool.flit.scripts]
-antidote = "antidote.interactor:main"
+antidotes = "antidotes.interactor:main"
