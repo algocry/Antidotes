@@ -13,4 +13,4 @@ install:
 
 # Run the unit test
 script:
-- python3 interactor.py -v
+- python3 antidote/interactor.py -v
