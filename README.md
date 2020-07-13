@@ -20,7 +20,7 @@ Being a script kid is not bad. But using someone else's tools and script to harm
 ## Setup:
 
 ```sh
-$ python3 -m pip install antidote
+$ python3 -m pip install antidotes
 ```
 
 ## Features:
