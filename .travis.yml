@@ -13,4 +13,4 @@ install:
 
 # Run the unit test
 script:
-- python3 -m antidotes/interactor -v
+- python3 -m antidotes.interactor -v
