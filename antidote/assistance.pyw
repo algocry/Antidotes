@@ -1,7 +1,7 @@
 import sys
 import pyperclip
 import notify2 
-from core import scanner
+from .core import scanner
 
 scan_status = {}
 
