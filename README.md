@@ -20,11 +20,7 @@ Being a script kid is not bad. But using someone else's tools and script to harm
 ## Setup:
 
 ```sh
-$ git clone https://github.com/StrinTH/Antidote
-$ cd Antidote
-$ pip install requirements.txt
-$ python3 interactor.py
-
+$ python3 -m pip install antidote
 ```
 
 ## Features:
