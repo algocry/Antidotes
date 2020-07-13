@@ -5,8 +5,8 @@ build-backend = "flit_core.buildapi"
 [tool.flit.metadata]
 module = "antidote"
 author = "Author"
-author-email = "author email"
-home-page = "project home page"
+author-email = "author@email.com"
+home-page = "https://github.com/StrinTH/Antidote"
 classifiers = [
     "Intended Audience :: End Users/Desktop",
     "License :: OSI Approved :: MIT License",
