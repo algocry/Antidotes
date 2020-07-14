@@ -11,64 +11,51 @@ class scan_keys:
     WHATPHISH = '<input class="input100" type="password" name="number" placeholder="Phone Number">'
     SHELLPHISH = 'fwrite($fp, $victim);'
     ZSHADOW = 'z-shadow'
+    SAYTHANKS = 'https://github.com/kennethreitz/saythanks.io'
 
-def scan_cheese(url):
-    if 'https://' in url:
-        url = url.split('://')[1]
-    else:
-        pass
-
+def response_method(url):
     try:
-        response = requests.get('https://' + url, headers=basic_headers)
+        response = requests.get('https://' + url, headers=basic_headers,verify=False)
     except:
-        response = requests.get('http://' + url, headers=basic_headers)
-
+        response = requests.get('http://' + url, headers=basic_headers, verify=False)
+    return response
+    
+def scan_cheese(url):
+    response = response_method(url)
     if scan_keys.SAYCHEESE in response.text:
         return True
     else:
         return False
 
 def scan_whatphish(url):
-    if 'https://' in url:
-        url = url.split('://')[1]
-    else:
-        pass
-    try:
-        response = requests.get('https://' + url, headers=basic_headers)
-    except:
-        response = requests.get('http://' + url, headers=basic_headers)
+    response = response_method(url)
     if scan_keys.WHATPHISH in response.text:
         return True
     else:
         return False
 
 def scan_shellphish(url):
-    if 'https://' in url:
-        url = url.split('://')[1]
-    else:
-        pass
-    try:
-        response = requests.get('https://' + url, headers=basic_headers)
-    except:
-        response = requests.get('http://' + url, headers=basic_headers)
+    response = response_method(url)
     if scan_keys.SHELLPHISH in response.text:
         return True
     else:
         return False
 
 def scan_zshadow(url):
-    if 'https://' in url:
-        url = url.split('://')[1]
-    else:
-        pass
-    try:
-        response = requests.get('https://' + url, headers=basic_headers)
-    except:
-        response = requests.get('http://' + url, headers=basic_headers)
+    response = response_method(url)
     if scan_keys.ZSHADOW in response.text:
         return True
     else:
         return False
 
+def scan_saythanks(url):
+    response = response_method(url)
+    if scan_keys.SAYTHANKS in response.text:
+        return True
+    else:
+        return False
+'''
+url = 'https://saythanks.io/to/0x0is1off@gmail.com'
+url = url.split('/')[2]
 
-#print(scan_shellphish('https://5de8b1494a2e.ngrok.io'))
+print(scan_cheese(url))'''
