@@ -3,9 +3,9 @@
 [![Build Status](https://travis-ci.com/StrinTH/Antidote.svg?branch=master)](https://travis-ci.com/StrinTH/Antidote)
 [![Build Status](https://img.shields.io/badge/stage-alpha-orange)]()
 
-AntiDOTE v0.2
+AntiDOTE v0.1.0
 ![logo](./assets/logo2.png)
-AntiDOTE v0.2
+AntiDOTE v0.1.0
 
 --------------
 
