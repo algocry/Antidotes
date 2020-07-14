@@ -77,16 +77,21 @@ $ python3 -m pip install antidotes
     
     * You can use this to spam your message as text to them. After a while, their account will be removed by the site bots itself for overloading.
 
-        ```sh
-        Note: As z-shadow and shadowaves are down more than for a month, this tool is not tested so much. 
-        but it was working for more than half a year uninteruptully.
-        ```
+    ***Note: As z-shadow and shadowaves are down more than for a month, this tool is not tested so much. 
+    but it was working for more than half a year uninteruptully.***
+
+* ### Antidote Saythanks
+
+    As using [SayThanks.io](https://saythanks.io) is popular nowadays in script peoples, so in case they spamming with it, here is something that might help you.
+
+    ***Note: This tool is not against saythanks developers or users. We even love those devs. this module is for misusers and also, we do not promote or appericiate abuse of this module.***
+
 
 ## TO-DO list:
 
 * **[Done]** Add auto scan clipboard copied URLs. [9cc7fb7](https://github.com/StrinTH/Antidote/commit/9cc7fb7)
 
-* **[Done]** Add anti saythanks module (In case needed)[2a6182b](https://github.com/StrinTH/Antidote/commit/2a6182b) [63636a6](https://github.com/StrinTH/Antidote/commit/63636a6) [4a04ba2](https://github.com/StrinTH/Antidote/commit/4a04ba2)
+* **[Done]** Add anti saythanks module (In case needed)[8edba61](https://github.com/StrinTH/Antidote/commit/8edba61) [02e64e6](https://github.com/StrinTH/Antidote/commit/02e64e6) [34d4f9b](https://github.com/StrinTH/Antidote/commit/34d4f9b)
 
 * **[Done]** Make GUI for this tool to handle actions for URLs through corner sidebar.[9cc7fb7](https://github.com/StrinTH/Antidote/commit/9cc7fb7)
 
