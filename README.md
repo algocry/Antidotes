@@ -86,11 +86,17 @@ $ python3 -m pip install antidotes
 
 * **[Done]** Add auto scan clipboard copied URLs. [9cc7fb7](https://github.com/StrinTH/Antidote/commit/9cc7fb7)
 
-* Add anti saythanks module (In case needed)
+* **[Done]** Add anti saythanks module (In case needed)[2a6182b](https://github.com/StrinTH/Antidote/commit/2a6182b) [63636a6](https://github.com/StrinTH/Antidote/commit/63636a6) [4a04ba2](https://github.com/StrinTH/Antidote/commit/4a04ba2)
 
-* Make GUI for this tool to handle actions for URLs through corner sidebar.
+* **[Done]** Make GUI for this tool to handle actions for URLs through corner sidebar.[9cc7fb7](https://github.com/StrinTH/Antidote/commit/9cc7fb7)
 
-### Collaborators
+* **[Current]** Add more Modules.
+
+* Add bulk sms module.
+
+* Upgrade scanner.
+
+### Contributors
 
 * Thanks to all Devs who helped in improving this project.
 
