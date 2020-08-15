@@ -1,4 +1,4 @@
-# Antidote - A Skiddies buster tool
+# Antidote - An anti-hacking tool
 
 [![Build Status](https://travis-ci.com/StrinTH/Antidote.svg?branch=master)](https://travis-ci.com/StrinTH/Antidote)
 [![Build Status](https://img.shields.io/badge/stage-alpha-orange)]()
@@ -15,7 +15,7 @@ AntiDOTE v0.1.0
 
 ## Description:
 
-Being a script kid is not bad. But using someone else's tools and script to harm others is absolutely bad. And this thing is actually needed right now.
+Reverse hack the attacker with Antidotes
 
 ## Setup:
 
@@ -27,7 +27,7 @@ $ python3 -m pip install antidotes
 
 * This tool contains a scanner module to scan the given urls for infection by most used and popular scripts.
 
-* It contains a special module for 'Saycheese' or other similar 'camera spoofing' scripts. Inherited from <https://github.com/StrinTH/saycheese-antidote>.
+* It contains a special module for 'Saycheese' or other similar 'camera spoofing' scripts. Inherited from ![saycheese-antidotes](https://github.com/StrinTH/saycheese-antidote) .
 
 * This tool can be run in background and keeps checking for malicious url from clipboard and will scan it automatically.
 
