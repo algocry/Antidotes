@@ -1,4 +1,4 @@
-# Antidote - An anti-hacking tool
+# Antidotes - An anti-hacking tool
 
 [![Build Status](https://travis-ci.com/StrinTH/Antidote.svg?branch=master)](https://travis-ci.com/StrinTH/Antidote)
 [![Build Status](https://img.shields.io/badge/stage-alpha-orange)]()
@@ -89,11 +89,11 @@ $ python3 -m pip install antidotes
 
 ## TO-DO list:
 
-* **[Done]** Add auto scan clipboard copied URLs. [9cc7fb7](https://github.com/StrinTH/Antidote/commit/9cc7fb7)
+* **[Done]** Add auto scan clipboard copied URLs. [9cc7fb7](https://github.com/StrinTH/Antidotes/commit/9cc7fb7)
 
-* **[Done]** Add anti saythanks module (In case needed)[8edba61](https://github.com/StrinTH/Antidote/commit/8edba61) [02e64e6](https://github.com/StrinTH/Antidote/commit/02e64e6) [34d4f9b](https://github.com/StrinTH/Antidote/commit/34d4f9b)
+* **[Done]** Add anti saythanks module (In case needed)[8edba61](https://github.com/StrinTH/Antidotes/commit/8edba61) [02e64e6](https://github.com/StrinTH/Antidotes/commit/02e64e6) [34d4f9b](https://github.com/StrinTH/Antidotes/commit/34d4f9b)
 
-* **[Done]** Make GUI for this tool to handle actions for URLs through corner sidebar.[9cc7fb7](https://github.com/StrinTH/Antidote/commit/9cc7fb7)
+* **[Done]** Make GUI for this tool to handle actions for URLs through corner sidebar.[9cc7fb7](https://github.com/StrinTH/Antidotes/commit/9cc7fb7)
 
 * **[Current]** Add more Modules.
 
